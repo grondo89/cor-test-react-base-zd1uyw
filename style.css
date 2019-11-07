@@ -1,0 +1,43 @@
+h1, p {
+  font-family: Lato;
+}
+
+.container {
+  display : flex; 
+  flex-direction: column;
+  justify-content: "center";
+  align-items : center
+
+}
+
+.grid {
+  display: flex;
+  margin-top : 2%
+}
+
+.row {         
+  display: flex;
+  flex-direction: row;
+  justify-content: "center"      
+}
+
+.block {
+  margin-left: 50%;
+  margin-right: 50%;
+  padding-right: 35px;
+  padding-left: 35px;
+  border : solid;
+}
+
+.controller {
+  display : flex;
+  flex-direction : column;
+  margin-top : 5%;
+  justify-content : space-evenly;
+  align-items: center
+}
+
+.boton {
+  margin-left : 20px;
+  margin-bottom: 20px
+}
