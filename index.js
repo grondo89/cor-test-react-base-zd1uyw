@@ -6,6 +6,7 @@ import Data from "./assets/resources.json";
 import GridCheckerContainer from "./Containers/GridCheckerContainer";
 import Controller from "./Components/Controller";
 import Row from "./Components/Row";
+import shortid from "shortid"
 
 class App extends Component {
   constructor(props) {
@@ -42,17 +43,18 @@ class App extends Component {
   render() {
     return this.state.grid && this.state.grid.length > 0 ? (
       <div className={"container"}>
-      <div className={"header"}>
-      <h1> RESOLVEDOR DE SOPA DE LETRAS</h1>
-      </div>
+        <div className={"header"}>
+          <h1> RESOLVEDOR DE SOPA DE LETRAS</h1>
+        </div>
         {this.state.grid.map(row => (
           <div className={"grid"}>
-            <Row gridRow={row} />
+            <Row key={shortid.generate()} gridRow={row} />
           </div>
         ))}
         <div className={"controller"}>
           <div>
             <Controller
+              key={shortid.generate()}
               handleInput={this.handleInput}
               handleSubmit={this.handleSubmit}
               newInput={this.state.newInput}
@@ -60,6 +62,7 @@ class App extends Component {
           </div>
           <div>
             <GridCheckerContainer
+              key={shortid.generate()}
               grid={this.state.grid}
               name={this.state.name}
             />

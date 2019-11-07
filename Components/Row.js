@@ -1,5 +1,6 @@
 import React from "react";
 import Block from "./Block";
+import shortid from "shortid"
 
 const Row = ({ gridRow }) => {
   // console.log(this.props)
@@ -7,8 +8,8 @@ const Row = ({ gridRow }) => {
     gridRow && (
       <div className={"row"}>
         {gridRow.map(block => (
-          <div>
-            <Block gridBlock={block} />
+          <div >
+            <Block key={shortid.generate()} gridBlock={block} />
           </div>
         ))}
       </div>

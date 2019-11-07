@@ -18,12 +18,15 @@ h1, p {
 .row {         
   display: flex;
   flex-direction: row;
-  justify-content: "center"      
+  justify-content: "space-evenly"   I
+   
 }
 
-.block {
+h4 {
   margin-left: 50%;
   margin-right: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding-right: 35px;
   padding-left: 35px;
   border : solid;
